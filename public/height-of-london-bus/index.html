@@ -1,0 +1,406 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height of a London Bus</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../tailwind.css" />
+    <link rel="stylesheet" href="../custom.css" />
+  </head>
+
+  <body class="text-gray-600 font-Fajalla">
+    <div class="grid md:grid-cols-5">
+      <!----------------- NAV START -------------------------------->
+      <div class="md:col-span-1 flex justify-end bg-gray-900">
+        <nav class="text-right">
+  
+            <div class="px-4 py-2 cursor-pointer md:hidden flex justify-end" id="burger">
+              <svg
+                class="w-6 h-6 text-white"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </div>
+
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-white">
+              <a href="../" class="px-4 flex justify-end border-r-4 border-gray-900">
+                <img src="img/logo_200.png" alt="How Big is That Logo" class="w-24">
+              </a>
+            </li>
+
+            <li class="text-gray-100 py-1">
+              <a class="px-4 flex justify-end border-r-4 border-gray-900"
+                ><span class="text-red-600 font-bold"> Compared to:</span></a
+              >
+            </li>
+
+            <li class="text-white py-1">
+              <a
+                href="../size-of-wales/"
+                class="px-4 flex justify-end border-r-4 border-white"
+              >The area of Wales</a>
+                
+            </li>
+
+            <li class="text-white py-1">
+              <a
+                href="../height-of-london-bus/"
+                class="px-4 flex justify-end border-r-4 border-red-600"
+              >The height of a London Bus</a>
+            </li>
+            <li class="text-white py-1">
+              <a
+                href="../size-of-football-pitch/"
+                class="px-4 flex justify-end border-r-4 border-white"
+              >The area of a Football Pitch</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+   
+      <!----------------- NAV END -------------------------------->
+
+      <!----------------- MAIN START -------------------------------->
+      <main class="md:col-span-4 flex flex-col items-center">
+        <header class="py-5 text-center md:w-6/12 w-auto flex flex-col items-center">
+          <a href="../" class="hover:text-gray-700">
+            <img
+          src="../img/how-big-is-that.png"
+          alt="How Big is That Banner"
+        />
+          </a>
+          
+        </header>
+
+        <div class="bg-gray-200 flex flex-col items-center p-8 w-full">
+          <h1 class="sm:text-xl text-base font-semibold text-gray-700 pb-2 text-center">
+            Compare any Height to the Height of a London Bus
+          </h1>
+          <img
+            src="img/london-routemaster-bus.jpg"
+            alt="London Routemaster Bus"
+            class="w-4/12 sm:w-3/12 md:w-2/12 border border-gray-600 mt-1"
+          />
+
+          <div class="w-11/12 sm:w-8/12 text-center">
+            <p class="mt-3 sm:text-base text-sm">
+              The new Routemaster came into service in 2012 but it's the
+              original that comes to mind when we think of London's cultural
+              heritage. The original, iconic London Routemaster was manufactured
+              from 1954 - 1968 and was in mainstream service until 2005.
+            </p>
+            <p class="mt-3 sm:text-base text-sm">
+              It was 4.38 m (14feet 4.5 inches) tall.
+            </p>
+            <p class="mt-3 sm:text-base text-sm">
+              Apart from being a London icon, the double decker bus is often
+              used as handy comparative unit to measure height.
+            </p>
+            <p class="mt-3 sm:text-base text-sm">
+              e.g. the Burj Khalifa is as high as 189 double decker busses.
+            </p>
+          </div>
+        </div>
+
+        <!-- CALC DIV START -->
+        <div class="p-5 flex flex-col items-center mt-4 w-full">
+          <div class="flex shadow-md">
+            <button
+              id="btn1"
+              class="text-sm text-white bg-gray-900 rounded-l-md p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn1')"
+            >
+              Metres
+            </button>
+            <button
+              id="btn2"
+              class="text-sm text-white bg-gray-500 border-r-2 border-l-2 p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn2')"
+            >
+              Feet
+            </button>
+            <button
+              id="btn3"
+              class="text-sm text-white bg-gray-500 rounded-r-md p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn3')"
+            >
+              Kilometres
+            </button>
+          </div>
+
+          <div id="tab1" class="w-full flex flex-col items-center mt-4">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare a height in Metres
+            </h2>
+            <input
+              type="number"
+              id="tab1-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab1-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+
+          <div id="tab2" class="w-full flex-col items-center mt-4 hidden">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare a height in Feet
+            </h2>
+            <input
+              type="number"
+              id="tab2-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab2-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+
+          <div id="tab3" class="w-full flex-col items-center mt-4 hidden">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare a height in Kilometres
+            </h2>
+            <input
+              type="number"
+              id="tab3-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab3-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+        </div>
+
+        <!----------------- British Isles Mountains -------------------------------->
+        <div class="p-5 bg-gray-200 mt-10 flex flex-col items-center w-full">
+          <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+            Mountains in the British Isles Vs Double Decker Busses
+          </h2>
+
+          <table id="tg-dGBnO" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-2eu6">Mountain</th>
+                <th class="tg-8qi8">Height in Metres</th>
+                <th class="tg-8qi8">Height in Buses</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="tg-asdj">Ben Nevis (Scotland)</td>
+                <td class="tg-c0l1">1,345</td>
+                <td class="tg-c0l1">307</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Snowdon (Wales)</td>
+                <td class="tg-c0l1">1,085</td>
+                <td class="tg-c0l1">248</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Carrauntoohil (Ireland)</td>
+                <td class="tg-c0l1">1,038</td>
+                <td class="tg-c0l1">237</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Scafell Pike (England)</td>
+                <td class="tg-c0l1">978</td>
+                <td class="tg-c0l1">223</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Brown Willy (Cornwall)</td>
+                <td class="tg-c0l1">420</td>
+                <td class="tg-c0l1">96</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!----------------- World Mountains -------------------------------->
+
+          <h2
+            class="sm:text-xl text-base font-semibold text-gray-700 pb-2 mt-8"
+          >
+            Significant World Mountains Vs Double Decker Busses
+          </h2>
+
+          <table id="tg-dGBnO" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-2eu6">Mountain</th>
+                <th class="tg-8qi8">Height in Metres</th>
+                <th class="tg-8qi8">Height in Buses</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="tg-asdj">Everest</td>
+                <td class="tg-c0l1">8,848</td>
+                <td class="tg-c0l1">2,020</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mount Aconcagua (Argentina)</td>
+                <td class="tg-c0l1">6,962</td>
+                <td class="tg-c0l1">1,589</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Denali (Alaska)</td>
+                <td class="tg-c0l1">6,190</td>
+                <td class="tg-c0l1">1,413</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mount Kilimanjaro (Tanzania)</td>
+                <td class="tg-c0l1">5,895</td>
+                <td class="tg-c0l1">1,346</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mount Elbrus (Russia)</td>
+                <td class="tg-c0l1">5,642</td>
+                <td class="tg-c0l1">1,288</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mont Blanc (France / Italy)</td>
+                <td class="tg-c0l1">4,809</td>
+                <td class="tg-c0l1">1,098</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!----------------- TALL BUILDINGS -------------------------------->
+          <h2
+            class="sm:text-xl text-base font-semibold text-gray-700 pb-2 mt-8"
+          >
+            Tall Buildings Vs Double Decker Busses
+          </h2>
+
+          <table id="tg-dGBnO" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-2eu6">Building</th>
+                <th class="tg-8qi8">Height in Metres</th>
+                <th class="tg-8qi8">Height in Buses</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="tg-asdj">Burj Khalifa (Dubai)</td>
+                <td class="tg-c0l1">828</td>
+                <td class="tg-c0l1">189</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Shanghai Tower (Shanghai)</td>
+                <td class="tg-c0l1">632</td>
+                <td class="tg-c0l1">144</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">One World Trade Center (New York)</td>
+                <td class="tg-c0l1">541</td>
+                <td class="tg-c0l1">124</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Petronas Towers (Kuala Lumpur)</td>
+                <td class="tg-c0l1">452</td>
+                <td class="tg-c0l1">103</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Willis Tower (Chicargo)</td>
+                <td class="tg-c0l1">442</td>
+                <td class="tg-c0l1">101</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Empire State Building (New York)</td>
+                <td class="tg-c0l1">381</td>
+                <td class="tg-c0l1">87</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">The Shard (London)</td>
+                <td class="tg-c0l1">310</td>
+                <td class="tg-c0l1">71</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <!----------------- GO TO TOP BUTTON -------------------------------->
+    <button
+      onclick="topFunction()"
+      id="topButton"
+      class="to-top-button"
+      title="Go to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 11l7-7 7 7M5 19l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <!----------------- FOOTER MENU -------------------------------->
+    <div
+    class="bg-gray-900 p-10 border-t border-gray-100 flex flex-col w-full"
+  >
+    <div class="flex flex-col sm:flex-row w-full justify-evenly text-white">
+      <div>
+        <ul class="text-sm">
+          <li><a href="../">Home</a></li>
+          <li><a href="../size-of-wales/">Compare to the area of Wales</a></li>
+          <li><a href="../height-of-london-bus/">Compare to the Height of a London Bus</a></li>
+          <li><a href="../size-of-football-pitch/">Compare to the area of a Football Pitch</a></li>
+
+        </ul>
+      </div>
+      <div>
+        <ul class="text-sm">
+          <li><a href="../terms/">Terms</a></li>
+          <li><a href="../privacy/">Privacy and Cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <a href="../" class="hover:text-gray-700">
+          <img src="img/logo_200.png" alt="How Big is That Logo" class="w-24">
+        </a>
+      </div>
+    </div>
+   
+  </div>
+
+  <!----------------- FOOTER -------------------------------->
+  <div class="bg-gray-800">
+    <p class="text-white text-center text-xs p-5">
+      Web development by <span class="text-sm font-bold text-red-600"
+        >ninth sumo</span
+      >
+    </p>
+  </div>
+
+    <script src="index.js"></script>
+    <script src="page.js"></script>
+    <script src="calc.js"></script>
+    <script charset="utf-8" src="table.js"></script>
+  </body>
+</html>

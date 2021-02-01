@@ -1,0 +1,1548 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Size of Wales</title>
+    <link rel="icon" type="image/png" href="../img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../tailwind.css" />
+    <link rel="stylesheet" href="../custom.css" />
+  </head>
+
+  <body class="text-gray-600 font-Fajalla">
+    <div class="grid md:grid-cols-5">
+      <!----------------- NAV START -------------------------------->
+      <div class="md:col-span-1 flex justify-end bg-gray-900">
+        <nav class="text-right">
+          <div
+            class="px-4 py-2 cursor-pointer md:hidden flex justify-end"
+            id="burger"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </div>
+
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-white">
+              <a
+                href="../"
+                class="px-4 flex justify-end border-r-4 border-gray-900"
+              >
+                <img
+                  src="img/logo_200.png"
+                  alt="How Big is That Logo"
+                  class="w-24"
+                />
+              </a>
+            </li>
+
+            <li class="text-gray-100 py-1">
+              <a class="px-4 flex justify-end border-r-4 border-gray-900"
+                ><span class="text-red-600 font-bold"> Compared to:</span></a
+              >
+            </li>
+
+            <li class="text-white py-1">
+              <a
+                href="../size-of-wales/"
+                class="px-4 flex justify-end border-r-4 border-white"
+                >The area of Wales</a
+              >
+            </li>
+
+            <li class="text-white py-1">
+              <a
+                href="../height-of-london-bus/"
+                class="px-4 flex justify-end border-r-4 border-red-600"
+                >The height of a London Bus</a
+              >
+            </li>
+            <li class="text-white py-1">
+              <a
+                href="../size-of-football-pitch/"
+                class="px-4 flex justify-end border-r-4 border-white"
+                >The area of a Football Pitch</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!----------------- NAV END -------------------------------->
+
+      <!----------------- MAIN START -------------------------------->
+      <main class="md:col-span-4 flex flex-col items-center">
+        <header
+          class="py-5 text-center md:w-6/12 w-auto flex flex-col items-center"
+        >
+          <a href="../" class="hover:text-gray-700">
+            <img
+              src="../img/how-big-is-that.png"
+              alt="How Big is That Banner"
+            />
+          </a>
+        </header>
+
+        <div class="p-8 bg-gray-200 flex flex-col items-center w-full">
+          <!-- INFO DIV START -->
+          <h1
+            class="sm:text-xl text-base font-semibold text-gray-700 pb-2 text-center"
+          >
+            Compare any area to the size of Wales
+          </h1>
+          <img
+            src="img/cymru-flag.jpg"
+            alt="Welsh Flag"
+            class="w-4/12 sm:w-3/12 md:w-2/12 border border-gray-600 mt-1"
+          />
+
+          <div class="w-11/12 sm:w-8/12 text-center">
+            <p class="mt-3 sm:text-base text-sm">
+              The land area of Wales is 20,735 km² or 8,006 mi² or 2.0735
+              million hectares.
+            </p>
+            <p class="mt-3 sm:text-base text-sm">
+              Everybody knows that Wales is the perfect size for a country,
+              which is why it has long been used as handy comparative unit to
+              measure large areas.
+            </p>
+            <p class="mt-3 sm:text-base text-sm">
+              e.g. the Brazillian Rain forest is 265 x the size of Wales.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-5 flex flex-col items-center mt-4 w-full">
+          <!-- CALC DIV START -->
+          <div class="flex shadow-md">
+            <button
+              id="btn1"
+              class="text-sm text-white bg-gray-900 rounded-l-md p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn1')"
+            >
+              Km&sup2
+            </button>
+            <button
+              id="btn2"
+              class="text-sm text-white bg-gray-500 border-r-2 border-l-2 p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn2')"
+            >
+              Miles&sup2
+            </button>
+            <button
+              id="btn3"
+              class="text-sm text-white bg-gray-500 rounded-r-md p-2 focus:outline-none hover:shadow-lg hover:bg-gray-700"
+              onclick="openTab('btn3')"
+            >
+              Hectares
+            </button>
+          </div>
+
+          <div id="tab1" class="w-full flex flex-col items-center mt-4">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare an area in Km&sup2
+            </h2>
+            <input
+              type="number"
+              id="tab1-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab1-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+
+          <div id="tab2" class="w-full flex-col items-center mt-4 hidden">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare an area in Miles&sup2
+            </h2>
+            <input
+              type="number"
+              id="tab2-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab2-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+
+          <div id="tab3" class="w-full flex-col items-center mt-4 hidden">
+            <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+              Compare an area in Hectares
+            </h2>
+            <input
+              type="number"
+              id="tab3-area-in"
+              class="w-10/12 sm:w-6/12 mt-3 p-2 border border-gray-400 rounded-md sm:text-base text-sm focus:outline-none focus:border-gray-600 focus:shadow-inner"
+              placeholder="Enter an area to convert..."
+            />
+            <div id="tab3-area-out" class="invisible mt-3 sm:text-base text-sm">
+              0
+            </div>
+          </div>
+          <!-- CALC DIV END -->
+        </div>
+
+        <!----------------- UK COMPARRISON START -------------------------------->
+        <div class="p-5 bg-gray-200 mt-10 flex flex-col items-center w-full">
+          <h2 class="sm:text-xl text-base font-semibold text-gray-700 pb-2">
+            The size of Wales Vs UK an Ireland
+          </h2>
+
+          <table id="tg-dGBnO" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-2eu6">Country</th>
+                <th class="tg-8qi8">Area in Km&sup2</th>
+                <th class="tg-8qi8">Times the size of wales</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="tg-asdj">United Kingdom</td>
+                <td class="tg-c0l1">242,500</td>
+                <td class="tg-c0l1">11.90</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Great Britain (island)</td>
+                <td class="tg-c0l1">229,848</td>
+                <td class="tg-c0l1">11.28</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">England</td>
+                <td class="tg-c0l1">130,279</td>
+                <td class="tg-c0l1">6.39</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Scotland</td>
+                <td class="tg-c0l1">77,933</td>
+                <td class="tg-c0l1">3.82</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Wales</td>
+                <td class="tg-c0l1">20,735</td>
+                <td class="tg-c0l1">1.00</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Northern Ireland</td>
+                <td class="tg-c0l1">14,130</td>
+                <td class="tg-c0l1">0.68</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ireland</td>
+                <td class="tg-c0l1">70,273</td>
+                <td class="tg-c0l1">3.45</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!----------------- ALL COUNTRY COMPARISON START -------------------------------->
+
+          <h2
+            class="sm:text-xl text-base font-semibold text-gray-700 pb-2 mt-8"
+          >
+            The size of Wales Vs all countries
+          </h2>
+
+          <table id="tg-dGBnO" class="tg">
+            <thead>
+              <tr>
+                <th class="tg-2eu6">Country</th>
+                <th class="tg-8qi8">Area in Km&sup2</th>
+                <th class="tg-8qi8">Times the size of wales</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="tg-asdj">Russia</td>
+                <td class="tg-c0l1">17,098,242</td>
+                <td class="tg-c0l1">839.18</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Canada</td>
+                <td class="tg-c0l1">9,984,670</td>
+                <td class="tg-c0l1">490.05</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">United States</td>
+                <td class="tg-c0l1">9,833,517</td>
+                <td class="tg-c0l1">482.63</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">PR China</td>
+                <td class="tg-c0l1">9,597,000</td>
+                <td class="tg-c0l1">471.02</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Brazil</td>
+                <td class="tg-c0l1">8,514,877</td>
+                <td class="tg-c0l1">417.91</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Australia</td>
+                <td class="tg-c0l1">7,692,024</td>
+                <td class="tg-c0l1">377.52</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">India</td>
+                <td class="tg-c0l1">3,287,263</td>
+                <td class="tg-c0l1">161.34</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Argentina</td>
+                <td class="tg-c0l1">2,780,400</td>
+                <td class="tg-c0l1">136.46</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kazakhstan</td>
+                <td class="tg-c0l1">2,724,900</td>
+                <td class="tg-c0l1">133.74</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Algeria</td>
+                <td class="tg-c0l1">2,381,741</td>
+                <td class="tg-c0l1">116.90</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">DR of the Congo</td>
+                <td class="tg-c0l1">2,344,858</td>
+                <td class="tg-c0l1">115.09</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Greenland</td>
+                <td class="tg-c0l1">2,166,086</td>
+                <td class="tg-c0l1">106.31</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saudi Arabia</td>
+                <td class="tg-c0l1">2,150,000</td>
+                <td class="tg-c0l1">105.52</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mexico</td>
+                <td class="tg-c0l1">1,964,375</td>
+                <td class="tg-c0l1">96.41</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Indonesia</td>
+                <td class="tg-c0l1">1,904,569</td>
+                <td class="tg-c0l1">93.48</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Sudan</td>
+                <td class="tg-c0l1">1,886,068</td>
+                <td class="tg-c0l1">92.57</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Libya</td>
+                <td class="tg-c0l1">1,759,540</td>
+                <td class="tg-c0l1">86.36</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Iran</td>
+                <td class="tg-c0l1">1,648,195</td>
+                <td class="tg-c0l1">80.89</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mongolia</td>
+                <td class="tg-c0l1">1,564,100</td>
+                <td class="tg-c0l1">76.77</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Peru</td>
+                <td class="tg-c0l1">1,285,216</td>
+                <td class="tg-c0l1">63.08</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Chad</td>
+                <td class="tg-c0l1">1,284,000</td>
+                <td class="tg-c0l1">63.02</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Niger</td>
+                <td class="tg-c0l1">1,267,000</td>
+                <td class="tg-c0l1">62.18</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Angola</td>
+                <td class="tg-c0l1">1,246,700</td>
+                <td class="tg-c0l1">61.19</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mali</td>
+                <td class="tg-c0l1">1,240,192</td>
+                <td class="tg-c0l1">60.87</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tibet</td>
+                <td class="tg-c0l1">1,228,400</td>
+                <td class="tg-c0l1">60.29</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">South Africa</td>
+                <td class="tg-c0l1">1,221,037</td>
+                <td class="tg-c0l1">59.93</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Colombia</td>
+                <td class="tg-c0l1">1,138,914</td>
+                <td class="tg-c0l1">55.90</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ethiopia</td>
+                <td class="tg-c0l1">1,104,300</td>
+                <td class="tg-c0l1">54.20</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bolivia</td>
+                <td class="tg-c0l1">1,098,581</td>
+                <td class="tg-c0l1">53.92</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mauritania</td>
+                <td class="tg-c0l1">1,030,000</td>
+                <td class="tg-c0l1">50.55</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Egypt</td>
+                <td class="tg-c0l1">1,002,000</td>
+                <td class="tg-c0l1">49.18</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tanzania</td>
+                <td class="tg-c0l1">945,087</td>
+                <td class="tg-c0l1">46.38</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Nigeria</td>
+                <td class="tg-c0l1">923,768</td>
+                <td class="tg-c0l1">45.34</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Venezuela</td>
+                <td class="tg-c0l1">912,050</td>
+                <td class="tg-c0l1">44.76</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Namibia</td>
+                <td class="tg-c0l1">824,292</td>
+                <td class="tg-c0l1">40.46</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mozambique</td>
+                <td class="tg-c0l1">801,590</td>
+                <td class="tg-c0l1">39.34</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Pakistan</td>
+                <td class="tg-c0l1">796,095</td>
+                <td class="tg-c0l1">39.07</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Turkey</td>
+                <td class="tg-c0l1">783,562</td>
+                <td class="tg-c0l1">38.46</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Chile</td>
+                <td class="tg-c0l1">756,102</td>
+                <td class="tg-c0l1">37.11</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Zambia</td>
+                <td class="tg-c0l1">752,618</td>
+                <td class="tg-c0l1">36.94</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Myanmar</td>
+                <td class="tg-c0l1">676,578</td>
+                <td class="tg-c0l1">33.21</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Afghanistan</td>
+                <td class="tg-c0l1">652,090</td>
+                <td class="tg-c0l1">32.00</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Somalia</td>
+                <td class="tg-c0l1">637,657</td>
+                <td class="tg-c0l1">31.30</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Central African Republic</td>
+                <td class="tg-c0l1">622,984</td>
+                <td class="tg-c0l1">30.58</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ukraine</td>
+                <td class="tg-c0l1">603,628</td>
+                <td class="tg-c0l1">29.63</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Madagascar</td>
+                <td class="tg-c0l1">587,041</td>
+                <td class="tg-c0l1">28.81</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Botswana</td>
+                <td class="tg-c0l1">582,000</td>
+                <td class="tg-c0l1">28.56</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kenya</td>
+                <td class="tg-c0l1">580,000</td>
+                <td class="tg-c0l1">28.47</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">France</td>
+                <td class="tg-c0l1">551,695</td>
+                <td class="tg-c0l1">27.08</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Yemen</td>
+                <td class="tg-c0l1">527,968</td>
+                <td class="tg-c0l1">25.91</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Thailand</td>
+                <td class="tg-c0l1">513,120</td>
+                <td class="tg-c0l1">25.18</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Spain</td>
+                <td class="tg-c0l1">505,992</td>
+                <td class="tg-c0l1">24.83</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Turkmenistan</td>
+                <td class="tg-c0l1">488,100</td>
+                <td class="tg-c0l1">23.96</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cameroon</td>
+                <td class="tg-c0l1">475,650</td>
+                <td class="tg-c0l1">23.34</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Papua New Guinea</td>
+                <td class="tg-c0l1">462,840</td>
+                <td class="tg-c0l1">22.72</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Sweden</td>
+                <td class="tg-c0l1">450,295</td>
+                <td class="tg-c0l1">22.10</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Uzbekistan</td>
+                <td class="tg-c0l1">447,400</td>
+                <td class="tg-c0l1">21.96</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Morocco</td>
+                <td class="tg-c0l1">446,550</td>
+                <td class="tg-c0l1">21.92</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Iraq</td>
+                <td class="tg-c0l1">438,317</td>
+                <td class="tg-c0l1">21.51</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Paraguay</td>
+                <td class="tg-c0l1">406,752</td>
+                <td class="tg-c0l1">19.96</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Zimbabwe</td>
+                <td class="tg-c0l1">390,757</td>
+                <td class="tg-c0l1">19.18</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Japan</td>
+                <td class="tg-c0l1">377,915</td>
+                <td class="tg-c0l1">18.55</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Germany</td>
+                <td class="tg-c0l1">357,375</td>
+                <td class="tg-c0l1">17.54</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Republic of the Congo</td>
+                <td class="tg-c0l1">342,000</td>
+                <td class="tg-c0l1">16.79</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Finland</td>
+                <td class="tg-c0l1">338,145</td>
+                <td class="tg-c0l1">16.60</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Vietnam</td>
+                <td class="tg-c0l1">331,689</td>
+                <td class="tg-c0l1">16.28</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Malaysia</td>
+                <td class="tg-c0l1">329,847</td>
+                <td class="tg-c0l1">16.19</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Norway</td>
+                <td class="tg-c0l1">323,802</td>
+                <td class="tg-c0l1">15.89</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Côte d'Ivoire</td>
+                <td class="tg-c0l1">322,463</td>
+                <td class="tg-c0l1">15.83</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Poland</td>
+                <td class="tg-c0l1">312,685</td>
+                <td class="tg-c0l1">15.35</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Oman</td>
+                <td class="tg-c0l1">309,500</td>
+                <td class="tg-c0l1">15.19</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Italy</td>
+                <td class="tg-c0l1">301,318</td>
+                <td class="tg-c0l1">14.79</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Philippines</td>
+                <td class="tg-c0l1">300,000</td>
+                <td class="tg-c0l1">14.72</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ecuador</td>
+                <td class="tg-c0l1">283,561</td>
+                <td class="tg-c0l1">13.92</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Burkina Faso</td>
+                <td class="tg-c0l1">274,222</td>
+                <td class="tg-c0l1">13.46</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">New Zealand</td>
+                <td class="tg-c0l1">270,467</td>
+                <td class="tg-c0l1">13.27</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Gabon</td>
+                <td class="tg-c0l1">267,668</td>
+                <td class="tg-c0l1">13.14</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Western Sahara</td>
+                <td class="tg-c0l1">266,000</td>
+                <td class="tg-c0l1">13.06</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guinea</td>
+                <td class="tg-c0l1">245,857</td>
+                <td class="tg-c0l1">12.07</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">United Kingdom</td>
+                <td class="tg-c0l1">242,500</td>
+                <td class="tg-c0l1">11.90</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Great Britain (island)</td>
+                <td class="tg-c0l1">229,848</td>
+                <td class="tg-c0l1">11.28</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">England</td>
+                <td class="tg-c0l1">130,279</td>
+                <td class="tg-c0l1">6.39</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Scotland</td>
+                <td class="tg-c0l1">77,933</td>
+                <td class="tg-c0l1">3.82</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Wales</td>
+                <td class="tg-c0l1">20,779</td>
+                <td class="tg-c0l1">1.02</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Uganda</td>
+                <td class="tg-c0l1">241,551</td>
+                <td class="tg-c0l1">11.86</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ghana</td>
+                <td class="tg-c0l1">238,533</td>
+                <td class="tg-c0l1">11.71</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Romania</td>
+                <td class="tg-c0l1">238,391</td>
+                <td class="tg-c0l1">11.70</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Lao PDR (Laos)</td>
+                <td class="tg-c0l1">236,800</td>
+                <td class="tg-c0l1">11.62</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guyana</td>
+                <td class="tg-c0l1">214,969</td>
+                <td class="tg-c0l1">10.55</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Belarus</td>
+                <td class="tg-c0l1">207,595</td>
+                <td class="tg-c0l1">10.19</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kyrgyzstan</td>
+                <td class="tg-c0l1">199,951</td>
+                <td class="tg-c0l1">9.81</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Senegal</td>
+                <td class="tg-c0l1">196,722</td>
+                <td class="tg-c0l1">9.66</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Syria</td>
+                <td class="tg-c0l1">185,180</td>
+                <td class="tg-c0l1">9.09</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cambodia</td>
+                <td class="tg-c0l1">181,035</td>
+                <td class="tg-c0l1">8.89</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Uruguay</td>
+                <td class="tg-c0l1">176,215</td>
+                <td class="tg-c0l1">8.65</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Suriname</td>
+                <td class="tg-c0l1">163,820</td>
+                <td class="tg-c0l1">8.04</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tunisia</td>
+                <td class="tg-c0l1">163,610</td>
+                <td class="tg-c0l1">8.03</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Nepal</td>
+                <td class="tg-c0l1">147,181</td>
+                <td class="tg-c0l1">7.22</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bangladesh</td>
+                <td class="tg-c0l1">143,998</td>
+                <td class="tg-c0l1">7.07</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tajikistan</td>
+                <td class="tg-c0l1">143,100</td>
+                <td class="tg-c0l1">7.02</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Greece</td>
+                <td class="tg-c0l1">131,957</td>
+                <td class="tg-c0l1">6.48</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Nicaragua</td>
+                <td class="tg-c0l1">130,370</td>
+                <td class="tg-c0l1">6.40</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">North Korea</td>
+                <td class="tg-c0l1">120,538</td>
+                <td class="tg-c0l1">5.92</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Malawi</td>
+                <td class="tg-c0l1">118,484</td>
+                <td class="tg-c0l1">5.82</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Eritrea</td>
+                <td class="tg-c0l1">117,600</td>
+                <td class="tg-c0l1">5.77</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Benin</td>
+                <td class="tg-c0l1">112,622</td>
+                <td class="tg-c0l1">5.53</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Honduras</td>
+                <td class="tg-c0l1">112,492</td>
+                <td class="tg-c0l1">5.52</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Liberia</td>
+                <td class="tg-c0l1">111,369</td>
+                <td class="tg-c0l1">5.47</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bulgaria</td>
+                <td class="tg-c0l1">110,879</td>
+                <td class="tg-c0l1">5.44</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cuba</td>
+                <td class="tg-c0l1">109,884</td>
+                <td class="tg-c0l1">5.39</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guatemala</td>
+                <td class="tg-c0l1">108,889</td>
+                <td class="tg-c0l1">5.34</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Iceland</td>
+                <td class="tg-c0l1">103,000</td>
+                <td class="tg-c0l1">5.06</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">South Korea</td>
+                <td class="tg-c0l1">99,678</td>
+                <td class="tg-c0l1">4.89</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Hungary</td>
+                <td class="tg-c0l1">93,028</td>
+                <td class="tg-c0l1">4.57</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Portugal</td>
+                <td class="tg-c0l1">92,090</td>
+                <td class="tg-c0l1">4.52</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Jordan</td>
+                <td class="tg-c0l1">89,342</td>
+                <td class="tg-c0l1">4.38</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Azerbaijan</td>
+                <td class="tg-c0l1">86,600</td>
+                <td class="tg-c0l1">4.25</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">French Guiana</td>
+                <td class="tg-c0l1">83,534</td>
+                <td class="tg-c0l1">4.10</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Austria</td>
+                <td class="tg-c0l1">83,871</td>
+                <td class="tg-c0l1">4.12</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">United Arab Emirates</td>
+                <td class="tg-c0l1">83,600</td>
+                <td class="tg-c0l1">4.10</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Czech Republic</td>
+                <td class="tg-c0l1">78,867</td>
+                <td class="tg-c0l1">3.87</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Serbia</td>
+                <td class="tg-c0l1">77,474</td>
+                <td class="tg-c0l1">3.80</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Panama</td>
+                <td class="tg-c0l1">74,177</td>
+                <td class="tg-c0l1">3.64</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Sierra Leone</td>
+                <td class="tg-c0l1">71,740</td>
+                <td class="tg-c0l1">3.52</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ireland (Republic of)</td>
+                <td class="tg-c0l1">70,273</td>
+                <td class="tg-c0l1">3.45</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Georgia</td>
+                <td class="tg-c0l1">69,700</td>
+                <td class="tg-c0l1">3.42</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Sri Lanka</td>
+                <td class="tg-c0l1">65,610</td>
+                <td class="tg-c0l1">3.22</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Lithuania</td>
+                <td class="tg-c0l1">65,300</td>
+                <td class="tg-c0l1">3.20</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Latvia</td>
+                <td class="tg-c0l1">64,589</td>
+                <td class="tg-c0l1">3.17</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Svalbard and Jan Mayen</td>
+                <td class="tg-c0l1">62,422</td>
+                <td class="tg-c0l1">3.06</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Togo</td>
+                <td class="tg-c0l1">56,785</td>
+                <td class="tg-c0l1">2.79</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Croatia</td>
+                <td class="tg-c0l1">56,594</td>
+                <td class="tg-c0l1">2.78</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bosnia and Herzegovina</td>
+                <td class="tg-c0l1">51,197</td>
+                <td class="tg-c0l1">2.51</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Costa Rica</td>
+                <td class="tg-c0l1">51,100</td>
+                <td class="tg-c0l1">2.51</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Slovakia</td>
+                <td class="tg-c0l1">49,035</td>
+                <td class="tg-c0l1">2.41</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Dominican Republic</td>
+                <td class="tg-c0l1">48,310</td>
+                <td class="tg-c0l1">2.37</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Estonia</td>
+                <td class="tg-c0l1">45,227</td>
+                <td class="tg-c0l1">2.22</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Denmark</td>
+                <td class="tg-c0l1">42,916</td>
+                <td class="tg-c0l1">2.11</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Netherlands</td>
+                <td class="tg-c0l1">41,543</td>
+                <td class="tg-c0l1">2.04</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Switzerland</td>
+                <td class="tg-c0l1">41,285</td>
+                <td class="tg-c0l1">2.03</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bhutan</td>
+                <td class="tg-c0l1">38,394</td>
+                <td class="tg-c0l1">1.88</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Taiwan (Republic of China)</td>
+                <td class="tg-c0l1">36,188</td>
+                <td class="tg-c0l1">1.78</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guinea-Bissau</td>
+                <td class="tg-c0l1">36,125</td>
+                <td class="tg-c0l1">1.77</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Moldova</td>
+                <td class="tg-c0l1">33,850</td>
+                <td class="tg-c0l1">1.66</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Belgium</td>
+                <td class="tg-c0l1">30,528</td>
+                <td class="tg-c0l1">1.50</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Lesotho</td>
+                <td class="tg-c0l1">30,355</td>
+                <td class="tg-c0l1">1.49</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Armenia</td>
+                <td class="tg-c0l1">29,743</td>
+                <td class="tg-c0l1">1.46</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Solomon Islands</td>
+                <td class="tg-c0l1">28,896</td>
+                <td class="tg-c0l1">1.42</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Albania</td>
+                <td class="tg-c0l1">28,748</td>
+                <td class="tg-c0l1">1.41</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Equatorial Guinea</td>
+                <td class="tg-c0l1">28,051</td>
+                <td class="tg-c0l1">1.38</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Burundi</td>
+                <td class="tg-c0l1">27,834</td>
+                <td class="tg-c0l1">1.37</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Haiti</td>
+                <td class="tg-c0l1">27,750</td>
+                <td class="tg-c0l1">1.36</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Rwanda</td>
+                <td class="tg-c0l1">26,338</td>
+                <td class="tg-c0l1">1.29</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">North Macedonia</td>
+                <td class="tg-c0l1">25,713</td>
+                <td class="tg-c0l1">1.26</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Djibouti</td>
+                <td class="tg-c0l1">23,200</td>
+                <td class="tg-c0l1">1.14</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Belize</td>
+                <td class="tg-c0l1">22,966</td>
+                <td class="tg-c0l1">1.13</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Israel</td>
+                <td class="tg-c0l1">22,072</td>
+                <td class="tg-c0l1">1.08</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">El Salvador</td>
+                <td class="tg-c0l1">21,041</td>
+                <td class="tg-c0l1">1.03</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Slovenia</td>
+                <td class="tg-c0l1">20,273</td>
+                <td class="tg-c0l1">0.99</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">New Caledonia</td>
+                <td class="tg-c0l1">18,575</td>
+                <td class="tg-c0l1">0.91</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Fiji</td>
+                <td class="tg-c0l1">18,274</td>
+                <td class="tg-c0l1">0.90</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kuwait</td>
+                <td class="tg-c0l1">17,818</td>
+                <td class="tg-c0l1">0.87</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Swaziland</td>
+                <td class="tg-c0l1">17,364</td>
+                <td class="tg-c0l1">0.85</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">East Timor</td>
+                <td class="tg-c0l1">14,874</td>
+                <td class="tg-c0l1">0.73</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">The Bahamas</td>
+                <td class="tg-c0l1">13,943</td>
+                <td class="tg-c0l1">0.68</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Montenegro</td>
+                <td class="tg-c0l1">13,812</td>
+                <td class="tg-c0l1">0.68</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Vanuatu</td>
+                <td class="tg-c0l1">12,189</td>
+                <td class="tg-c0l1">0.60</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Falkland Islands</td>
+                <td class="tg-c0l1">12,173</td>
+                <td class="tg-c0l1">0.60</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Qatar</td>
+                <td class="tg-c0l1">11,586</td>
+                <td class="tg-c0l1">0.57</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">The Gambia</td>
+                <td class="tg-c0l1">11,295</td>
+                <td class="tg-c0l1">0.55</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Jamaica</td>
+                <td class="tg-c0l1">10,991</td>
+                <td class="tg-c0l1">0.54</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kosovo</td>
+                <td class="tg-c0l1">10,887</td>
+                <td class="tg-c0l1">0.53</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Lebanon</td>
+                <td class="tg-c0l1">10,400</td>
+                <td class="tg-c0l1">0.51</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cyprus</td>
+                <td class="tg-c0l1">9,251</td>
+                <td class="tg-c0l1">0.45</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Puerto Rico</td>
+                <td class="tg-c0l1">8,870</td>
+                <td class="tg-c0l1">0.44</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Palestinian territories</td>
+                <td class="tg-c0l1">6,020</td>
+                <td class="tg-c0l1">0.30</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Brunei Darussalam</td>
+                <td class="tg-c0l1">5,765</td>
+                <td class="tg-c0l1">0.28</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Trinidad and Tobago</td>
+                <td class="tg-c0l1">5,130</td>
+                <td class="tg-c0l1">0.25</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">French Polynesia</td>
+                <td class="tg-c0l1">4,167</td>
+                <td class="tg-c0l1">0.20</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cape Verde</td>
+                <td class="tg-c0l1">4,033</td>
+                <td class="tg-c0l1">0.20</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Samoa</td>
+                <td class="tg-c0l1">2,831</td>
+                <td class="tg-c0l1">0.14</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Luxembourg</td>
+                <td class="tg-c0l1">2,586</td>
+                <td class="tg-c0l1">0.13</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Réunion</td>
+                <td class="tg-c0l1">2,510</td>
+                <td class="tg-c0l1">0.12</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Comoros</td>
+                <td class="tg-c0l1">2,235</td>
+                <td class="tg-c0l1">0.11</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Mauritius</td>
+                <td class="tg-c0l1">2,040</td>
+                <td class="tg-c0l1">0.10</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guadeloupe</td>
+                <td class="tg-c0l1">1,630</td>
+                <td class="tg-c0l1">0.0800</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Faroe Islands</td>
+                <td class="tg-c0l1">1,393</td>
+                <td class="tg-c0l1">0.0684</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Hong Kong</td>
+                <td class="tg-c0l1">1,106</td>
+                <td class="tg-c0l1">0.0543</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Martinique</td>
+                <td class="tg-c0l1">1,100</td>
+                <td class="tg-c0l1">0.0540</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Netherlands Antilles</td>
+                <td class="tg-c0l1">999</td>
+                <td class="tg-c0l1">0.0490</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">São Tomé and Príncipe</td>
+                <td class="tg-c0l1">964</td>
+                <td class="tg-c0l1">0.0473</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Turks and Caicos Islands</td>
+                <td class="tg-c0l1">948</td>
+                <td class="tg-c0l1">0.0465</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Dominica</td>
+                <td class="tg-c0l1">751</td>
+                <td class="tg-c0l1">0.0369</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tonga</td>
+                <td class="tg-c0l1">747</td>
+                <td class="tg-c0l1">0.0367</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bahrain</td>
+                <td class="tg-c0l1">741</td>
+                <td class="tg-c0l1">0.0364</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Kiribati</td>
+                <td class="tg-c0l1">726</td>
+                <td class="tg-c0l1">0.0356</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Singapore</td>
+                <td class="tg-c0l1">725</td>
+                <td class="tg-c0l1">0.0356</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Micronesia, Federated States of</td>
+                <td class="tg-c0l1">702</td>
+                <td class="tg-c0l1">0.0345</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Isle of Man</td>
+                <td class="tg-c0l1">572</td>
+                <td class="tg-c0l1">0.0281</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guam</td>
+                <td class="tg-c0l1">549</td>
+                <td class="tg-c0l1">0.0269</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saint Lucia</td>
+                <td class="tg-c0l1">539</td>
+                <td class="tg-c0l1">0.0265</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Palau</td>
+                <td class="tg-c0l1">490</td>
+                <td class="tg-c0l1">0.0240</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Northern Mariana Islands</td>
+                <td class="tg-c0l1">477</td>
+                <td class="tg-c0l1">0.0234</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Andorra</td>
+                <td class="tg-c0l1">468</td>
+                <td class="tg-c0l1">0.0230</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Seychelles</td>
+                <td class="tg-c0l1">455</td>
+                <td class="tg-c0l1">0.0223</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Antigua and Barbuda</td>
+                <td class="tg-c0l1">442</td>
+                <td class="tg-c0l1">0.0217</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Barbados</td>
+                <td class="tg-c0l1">431</td>
+                <td class="tg-c0l1">0.0212</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saint Vincent and the Grenadines</td>
+                <td class="tg-c0l1">389</td>
+                <td class="tg-c0l1">0.0191</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Virgin Islands U.S.</td>
+                <td class="tg-c0l1">347</td>
+                <td class="tg-c0l1">0.0170</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Grenada</td>
+                <td class="tg-c0l1">344</td>
+                <td class="tg-c0l1">0.0169</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Malta</td>
+                <td class="tg-c0l1">316</td>
+                <td class="tg-c0l1">0.0155</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Maldives</td>
+                <td class="tg-c0l1">298</td>
+                <td class="tg-c0l1">0.0146</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cayman Islands</td>
+                <td class="tg-c0l1">264</td>
+                <td class="tg-c0l1">0.0130</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saint Kitts and Nevis</td>
+                <td class="tg-c0l1">261</td>
+                <td class="tg-c0l1">0.0128</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Niue</td>
+                <td class="tg-c0l1">260</td>
+                <td class="tg-c0l1">0.0128</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saint Pierre and Miquelon</td>
+                <td class="tg-c0l1">242</td>
+                <td class="tg-c0l1">0.0119</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Cook Islands</td>
+                <td class="tg-c0l1">236</td>
+                <td class="tg-c0l1">0.0116</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">American Samoa</td>
+                <td class="tg-c0l1">199</td>
+                <td class="tg-c0l1">0.0098</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Marshall Islands</td>
+                <td class="tg-c0l1">181</td>
+                <td class="tg-c0l1">0.0089</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Aruba</td>
+                <td class="tg-c0l1">180</td>
+                <td class="tg-c0l1">0.0088</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Liechtenstein</td>
+                <td class="tg-c0l1">160</td>
+                <td class="tg-c0l1">0.0079</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">British Virgin Islands</td>
+                <td class="tg-c0l1">151</td>
+                <td class="tg-c0l1">0.0074</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Wallis and Futuna</td>
+                <td class="tg-c0l1">142</td>
+                <td class="tg-c0l1">0.0070</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Saint Helena</td>
+                <td class="tg-c0l1">122</td>
+                <td class="tg-c0l1">0.0060</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Jersey</td>
+                <td class="tg-c0l1">116</td>
+                <td class="tg-c0l1">0.0057</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Montserrat</td>
+                <td class="tg-c0l1">102</td>
+                <td class="tg-c0l1">0.0050</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tristan da Cunha</td>
+                <td class="tg-c0l1">98</td>
+                <td class="tg-c0l1">0.0048</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Anguilla</td>
+                <td class="tg-c0l1">91</td>
+                <td class="tg-c0l1">0.0045</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Ascension Island</td>
+                <td class="tg-c0l1">88</td>
+                <td class="tg-c0l1">0.0043</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Guernsey</td>
+                <td class="tg-c0l1">78</td>
+                <td class="tg-c0l1">0.0038</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">San Marino</td>
+                <td class="tg-c0l1">61</td>
+                <td class="tg-c0l1">0.0030</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Bermuda</td>
+                <td class="tg-c0l1">53</td>
+                <td class="tg-c0l1">0.0026</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Norfolk Island</td>
+                <td class="tg-c0l1">36</td>
+                <td class="tg-c0l1">0.0018</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tuvalu</td>
+                <td class="tg-c0l1">26</td>
+                <td class="tg-c0l1">0.0013</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Nauru</td>
+                <td class="tg-c0l1">21</td>
+                <td class="tg-c0l1">0.0010</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Tokelau</td>
+                <td class="tg-c0l1">12</td>
+                <td class="tg-c0l1">0.0006</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Gibraltar</td>
+                <td class="tg-c0l1">6</td>
+                <td class="tg-c0l1">0.0003</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Pitcairn Islands</td>
+                <td class="tg-c0l1">5</td>
+                <td class="tg-c0l1">0.0002</td>
+              </tr>
+              <tr>
+                <td class="tg-asdj">Monaco</td>
+                <td class="tg-c0l1">1.95</td>
+                <td class="tg-c0l1">0.0001</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- COUNTRY COMPARISON START -->
+      </main>
+    </div>
+
+    <!----------------- GO TO TOP BUTTON -------------------------------->
+    <button
+      onclick="topFunction()"
+      id="topButton"
+      class="to-top-button"
+      title="Go to top"
+    >
+      <svg
+        class="w-6 h-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 11l7-7 7 7M5 19l7-7 7 7"
+        ></path>
+      </svg>
+    </button>
+
+    <!----------------- FOOTER MENU -------------------------------->
+    <div class="bg-gray-900 p-10 border-t border-gray-100 flex flex-col w-full">
+      <div class="flex flex-col sm:flex-row w-full justify-evenly text-white">
+        <div>
+          <ul class="text-sm">
+            <li><a href="../">Home</a></li>
+            <li><a href="./">Compare to the area of Wales</a></li>
+            <li>
+              <a href="../height-of-london-bus/"
+                >Compare to the Height of a London Bus</a
+              >
+            </li>
+            <li>
+              <a href="../size-of-football-pitch/"
+                >Compare to the area of a Football Pitch</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul class="text-sm">
+            <li><a href="../terms/">Terms</a></li>
+            <li><a href="../privacy/">Privacy and Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <a href="../" class="hover:text-gray-700">
+            <img
+              src="img/logo_200.png"
+              alt="How Big is That Logo"
+              class="w-24"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+    <!----------------- FOOTER -------------------------------->
+    <div class="bg-gray-800">
+      <p class="text-white text-center text-xs p-5">
+        Web development by <span class="text-sm font-bold text-red-600"
+          >ninth sumo</span
+        >
+      </p>
+    </div>
+
+    <!-- <script src="index.js"></script> -->
+    <script src="page.js"></script>
+    <script src="calc.js"></script>
+    <script charset="utf-8" src="table.js"></script>
+  </body>
+</html>
